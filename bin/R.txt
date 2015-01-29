@@ -266,6 +266,7 @@ int id list_item 0x7f090029
 int id major 0x7f090046
 int id middle 0x7f090018
 int id name 0x7f09003f
+int id nation 0x7f090043
 int id never 0x7f090012
 int id none 0x7f090019
 int id normal 0x7f090007
@@ -276,7 +277,6 @@ int id portrait 0x7f09003d
 int id progress_circular 0x7f090004
 int id progress_horizontal 0x7f090005
 int id radio 0x7f09002f
-int id residentCity 0x7f090043
 int id school 0x7f090045
 int id search_badge 0x7f090032
 int id search_bar 0x7f090031
@@ -350,9 +350,9 @@ int string contentDescription 0x7f0a000e
 int string email 0x7f0a0019
 int string major 0x7f0a0016
 int string name 0x7f0a000f
+int string nation 0x7f0a0013
 int string phone 0x7f0a0018
 int string polity 0x7f0a0014
-int string residentCity 0x7f0a0013
 int string school 0x7f0a0015
 int string sex 0x7f0a0011
 int style AppBaseTheme 0x7f0b0083

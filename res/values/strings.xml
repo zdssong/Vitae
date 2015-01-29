@@ -3,16 +3,16 @@
 
     <string name="app_name">个人简历</string>
     <string name="contentDescription">只是为了没有warning</string>
-    <string name="name">姓名：</string>
-    <string name="age">年龄：</string>
-    <string name="sex">性别：</string>
+    <string name="name">姓&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;名：</string>
+    <string name="age">年&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;龄：</string>
+    <string name="sex">性&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;别：</string>
     <string name="birthday">出生日期：</string>
-    <string name="residentCity">户口所在地：</string>
+    <string name="nation">民&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;族：</string>
     <string name="polity">政治面貌：</string>
     <string name="school">毕业院校：</string>
-    <string name="major">专业：</string>
-    <string name="address">地址：</string>
-    <string name="phone">电话：</string>
-    <string name="email">E-mail：</string>
+    <string name="major">专&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;业：</string>
+    <string name="address">地&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;址：</string>
+    <string name="phone">电&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;话：</string>
+    <string name="email">&#160;&#160;&#160;&#160;E-mail：</string>
 
 </resources>
