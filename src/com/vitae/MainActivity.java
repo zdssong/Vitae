@@ -21,7 +21,10 @@ public class MainActivity extends Activity {
 	private ViewPager viewPager = null;
 	private LayoutInflater inflater = null;
 	private List<View> views = new ArrayList<View>();
-	private View personalView;
+	private View personalInfoView = null;
+	private View experienceView = null;
+	private View rewardView = null;
+	private View showOpusView = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -49,14 +52,23 @@ public class MainActivity extends Activity {
 
 	private void initView() {
 		viewPager = (ViewPager) findViewById(R.id.viewPager);
-		personalView = inflater.inflate(R.layout.view_personal,
+		personalInfoView = inflater.inflate(R.layout.view_personal,
+				(ViewGroup) findViewById(R.layout.activity_main));
+		experienceView = inflater.inflate(R.layout.view_experience,
+				(ViewGroup) findViewById(R.layout.activity_main));
+		rewardView = inflater.inflate(R.layout.view_reward,
+				(ViewGroup) findViewById(R.layout.activity_main));
+		showOpusView = inflater.inflate(R.layout.view_showopus,
 				(ViewGroup) findViewById(R.layout.activity_main));
 
-		views.add(personalView);
+		views.add(personalInfoView);
+		views.add(experienceView);
+		views.add(rewardView);
+		views.add(showOpusView);
 	}
 
 	private void addController() {
-		new PersonalController(personalView);
+		new PersonalController(personalInfoView);
 	}
 
 	private void initListener() {

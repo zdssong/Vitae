@@ -31,7 +31,7 @@ public class MainPagerAdapter extends PagerAdapter {
 	public void destroyItem(ViewGroup container, int position, Object object) {
 		// TODO Auto-generated method stub
 		container.removeView(views.get(position));
-		super.destroyItem(container, position, object);
+
 	}
 
 	@Override

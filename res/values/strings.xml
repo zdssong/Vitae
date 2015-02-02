@@ -14,5 +14,13 @@
     <string name="address">地&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;址：</string>
     <string name="phone">电&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;话：</string>
     <string name="email">&#160;&#160;&#160;&#160;E-mail：</string>
+    <string name="work">工作经验：</string>
+    <string name="worktime">工作时间</string>
+    <string name="workcontent">工作内容</string>
+    <string name="study">学习经验：</string>
+    <string name="studytime">学习时间</string>
+    <string name="project">项目经验：</string>
+    <string name="schoolreward">学校奖励：</string>
+    <string name="otherreward">其他奖励：</string>
 
 </resources>
