@@ -24,6 +24,14 @@
         </activity>
         <activity android:name="com.vitae.OpusDetailActivity" >
         </activity>
+        <activity android:name="com.vitae.PersonalEditActivity" >
+        </activity>
+        <activity android:name="com.vitae.RewardEditActivity" >
+        </activity>
+        <activity android:name="com.vitae.ShowOpusEditActivity" >
+        </activity>
+        <activity android:name="com.vitae.ExperienceEditActivity" >
+        </activity>
     </application>
 
 </manifest>

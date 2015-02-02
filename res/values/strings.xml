@@ -22,5 +22,10 @@
     <string name="project">项目经验：</string>
     <string name="schoolreward">学校奖励：</string>
     <string name="otherreward">其他奖励：</string>
+    
+    <string name="edit">编辑</string>
+    <string name="alter">修改</string>
+    <string name="personaledit">个人信息编辑</string>
+    <string name="personal">个人信息</string>
 
 </resources>

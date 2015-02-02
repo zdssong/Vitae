@@ -1,10 +1,14 @@
 package com.vitae.controller;
 
+import com.vitae.R;
+
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.TextView;
 
 public class ExperienceController implements OnClickListener {
-	private View mainView;
+	private View mainView = null;
+	private TextView title = null;
 
 	public ExperienceController(View mainView) {
 		// TODO Auto-generated constructor stub
@@ -19,10 +23,12 @@ public class ExperienceController implements OnClickListener {
 
 	}
 
-	private void initView(){
-		
+	private void initView() {
+		title = (TextView) mainView.findViewById(R.id.label);
+		title.setText("ExperienceController");
 	}
-	private void initListener(){
-		
+
+	private void initListener() {
+
 	}
 }

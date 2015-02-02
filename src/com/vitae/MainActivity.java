@@ -4,19 +4,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.vitae.adapter.MainPagerAdapter;
+import com.vitae.controller.ExperienceController;
 import com.vitae.controller.PersonalController;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
+import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements OnPageChangeListener {
 
 	private ViewPager viewPager = null;
 	private LayoutInflater inflater = null;
@@ -26,6 +30,9 @@ public class MainActivity extends Activity {
 	private View rewardView = null;
 	private View showOpusView = null;
 
+	// To mark the current pager in ViewPager
+	private int currentPager = 0;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -33,21 +40,42 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		inflater = LayoutInflater.from(this);
 		initView();
+		initViewPager();
 		initListener();
-		ininViewPager();
 		addController();
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// TODO Auto-generated method stub
+		MenuInflater inflater = new MenuInflater(this);
+		inflater.inflate(R.menu.main_menu, menu);
 		return super.onCreateOptionsMenu(menu);
 	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// TODO Auto-generated method stub
-		return super.onOptionsItemSelected(item);
+		Intent intent = new Intent();
+		switch (currentPager) {
+		case 0:
+			intent.setClass(MainActivity.this, PersonalEditActivity.class);
+			startActivity(intent);
+			break;
+		case 1:
+			intent.setClass(MainActivity.this, ExperienceEditActivity.class);
+			startActivity(intent);
+			break;
+		case 2:
+			intent.setClass(MainActivity.this, RewardEditActivity.class);
+			startActivity(intent);
+			break;
+		case 3:
+			intent.setClass(MainActivity.this, ShowOpusEditActivity.class);
+			startActivity(intent);
+			break;
+		}
+		return true;
 	}
 
 	private void initView() {
@@ -69,14 +97,34 @@ public class MainActivity extends Activity {
 
 	private void addController() {
 		new PersonalController(personalInfoView);
+		new ExperienceController(experienceView);
 	}
 
 	private void initListener() {
+		viewPager.setOnPageChangeListener(this);
 	}
 
-	private void ininViewPager() {
+	private void initViewPager() {
 		MainPagerAdapter adapter = new MainPagerAdapter(views);
 		viewPager.setAdapter(adapter);
+	}
+
+	@Override
+	public void onPageScrollStateChanged(int arg0) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onPageScrolled(int arg0, float arg1, int arg2) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onPageSelected(int currentPager) {
+		// TODO Auto-generated method stub
+		this.currentPager = currentPager;
 	}
 
 }
